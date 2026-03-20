@@ -1,0 +1,15 @@
+def function1_client_registration():
+    client_registration : {
+        "client_id":client_id
+        "client_name":client_name
+        "email":email
+    }
+    return client_registration
+def function2_product_registration(registration)
+    product_registration = (product_id, product_name, unit_price)
+    return product_registration
+def function3_order_creation(client, product)
+    order_total = unit_price * quantity
+def function4_consulting_order_registered()
+def function5_daily_revenue_calculation()
+def function6_final_report_generation()
