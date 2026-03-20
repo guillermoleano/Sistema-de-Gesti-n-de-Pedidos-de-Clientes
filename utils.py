@@ -78,43 +78,43 @@ def function6_final_report_generation(order_created):
 
 
     for i in range(0, len(order_created), 3):
-        producto = order_created[i+1][1]
-        print(f"Product: {producto} - Quantity: {order_created[i+1][3]}") # <-- aqui imprimes el producto)
+        product = order_created[i+1][1]
+        print(f"Product: {product} - Quantity: {order_created[i+1][3]}") # <-- aqui imprimes el producto)
 
     print(order_created)
 
-    reporte = {}
+    report = {}
 
     for i in range(0, len(order_created), 3):
-        producto = order_created[i+1][1]
-        cantidad = order_created[i+1][3]
-        reporte[producto] = reporte.get(producto, 0) + cantidad
-    print(reporte)
+        product = order_created[i+1][1]
+        quantity = order_created[i+1][3]
+        report[product] = report.get(product, 0) + quantity
+    print(report)
 
     #------------------PRINT ORDER GROUPED BY CLIENT
-    pedidos_por_cliente = {}
+    order_by_client = {}
 
     for i in range(0, len(order_created), 3):
-        cliente = order_created[i]
-        producto = order_created[i+1]
+        client = order_created[i]
+        product = order_created[i+1]
         total = order_created[i+2]
 
-        nombre = cliente['client_name']
+        name = client['client_name']
 
-        if nombre not in pedidos_por_cliente:
-            pedidos_por_cliente[nombre] = {
-                "productos": []
+        if name not in order_by_client:
+            order_by_client[name] = {
+                "products": []
             }
 
-        pedidos_por_cliente[nombre]["productos"].append({
-            "producto": producto[1],
-            "cantidad": producto[3],
+        order_by_client[name]["products"].append({
+            "product": product[1],
+            "quantity": product[3],
             "total": total
         })
 
     # Imprimir pedidos agrupados
-    for cliente, info in pedidos_por_cliente.items():
-        print(f"\nClient: {cliente}" )
+    for client, info in order_by_client.items():
+        print(f"\nClient: {client}" )
         print("Associated products:")
-        for p in info["productos"]:
-            print(f"  - {p['producto']} | Cantidad: {p['cantidad']} | Total: {p['total']}")
+        for p in info["products"]:
+            print(f"  - {p['product']} | Quantity: {p['quantity']} | Total: {p['total']}")
