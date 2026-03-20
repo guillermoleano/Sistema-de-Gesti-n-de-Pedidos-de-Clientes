@@ -1,3 +1,11 @@
+import function1_client_registration from utils
+import function2_product_registration from utils
+import function3_order_creation from utils
+import function4_consulting_order_registered from utils
+import function5_daily_revenue_calculation from utils
+import function6_final_report_generation from utils
+
+
 print("Welcome to the Customer Order Management System")
 
 while = True:
