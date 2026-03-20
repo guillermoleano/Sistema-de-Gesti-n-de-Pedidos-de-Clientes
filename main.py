@@ -19,7 +19,7 @@ while True:
     4. Final Report                
     5. Exit
     --------------------------------
-    """))
+    Enter your choice:"""))
     
     if option == 1:
         client = function1_client_registration()
@@ -36,6 +36,8 @@ while True:
         revenue = function5_daily_revenue_calculation(order_created)
     if option == 4:
         function6_final_report_generation(order_created)
-    #if option == "5":
-    #    print("Goodbye!")"""
+    if option == 5:
+        print("Goodbye!")
+        break
+    
     
